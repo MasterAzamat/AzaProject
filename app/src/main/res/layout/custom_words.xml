@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/mama"
+        android:id="@+id/imageWord"/>
+
+    <TextView
+        android:id="@+id/textWord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ана - Мама"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/imageWord"
+        android:gravity="center"/>
+
+</RelativeLayout>

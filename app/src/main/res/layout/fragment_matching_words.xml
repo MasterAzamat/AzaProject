@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.asus.azaproject.Fragments.FragmentMatchingWords"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:padding="30dp"
+        android:weightSum="3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="#f2f2f2"
+                android:background="@drawable/shape_for_words_matching"
+                android:text="asdasdasdasdas"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="#f2f2f2"
+                android:textSize="16dp"
+                android:background="@drawable/shape_for_words_matching"
+                android:layout_margin="10dp"
+                android:text="asdasdasdasaasdasdasd"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:textSize="16dp"
+                android:textColor="#f2f2f2"
+                android:background="@drawable/shape_for_words_matching"
+                android:text="asdasas"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="#f2f2f2"
+                android:textSize="16dp"
+                android:background="@drawable/shape_for_words_matching"
+                android:layout_margin="10dp"
+                android:text="asdasdasdasasdasdsdaasdasdasd"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="#f2f2f2"
+                android:textSize="16dp"
+                android:background="@drawable/shape_for_words_matching"
+                android:layout_margin="10dp"
+                android:text="asdasdasdasasdasdsdaasasddasdasd"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:background="@drawable/shape_for_level"
+        android:weightSum="10">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="10"
+            android:padding="10dp"
+            android:text="Сөздерді орнына қойып орналастырыңыз"
+            android:textSize="16dp"
+            android:textStyle="italic" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:gravity="center|left"
+        android:padding="10dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Деңгейі - V"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="50dp"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorWhite"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="60dp"
+            android:src="@mipmap/ic_right"
+            android:background="@color/colorWhite"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

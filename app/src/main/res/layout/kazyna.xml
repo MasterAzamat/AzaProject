@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            app:srcCompat="@drawable/a" />
+
+        <TextView
+            android:paddingLeft="9dp"
+            android:paddingRight="9dp"
+            android:padding="15dp"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/iv"
+            android:layout_marginTop="15dp"
+            android:textSize="20dp"
+            android:background="@color/colorOyster"
+    android:text="Асык, ашык (каз. асық, карач.-балк. ашык, кирг. чүкө, ашык, монг. шагай, сибтат. шағай, тадж. ошуқ, тур. aşık, узб. oshiq) — надпяточная кость (таранная кость) овцы (в основном баранов) и реже другого мелкого рогатого скота. В русском языке кость чаще называется альчик от киргизского слова алчы обозначающем самое старшее положение кости." />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

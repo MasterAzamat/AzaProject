@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.asus.azaproject.Fragments.FragmentTest"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/testLevel1"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textSize="24sp"
+            android:gravity="left"
+            android:layout_weight="20"
+            android:textColor="@color/colorAccent"
+            android:text="I деңгейлі"
+            android:paddingLeft="10dp"
+            android:background="@drawable/shape_for_level"/>
+        <TextView
+            android:id="@+id/testLevel1pro"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:layout_weight="80"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="10dp"
+            android:text="71%"
+            android:layout_below="@+id/testLevel1"
+            android:background="@drawable/shape_for_test_grade"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+            <TextView
+            android:id="@+id/testLevel2"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textSize="24sp"
+            android:gravity="left"
+
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:text="II деңгейлі"
+            android:background="@drawable/shape_for_level"/>
+        <TextView
+            android:id="@+id/testLevel2pro"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:layout_below="@+id/testLevel2"
+            android:background="@drawable/shape_for_test_grade"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_vertical_margin"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/testLevel3"
+            android:layout_width="match_parent"
+
+            android:layout_height="40sp"
+            android:textColor="@color/colorAccent"
+            android:paddingLeft="10dp"
+            android:background="@drawable/shape_for_level"
+            android:gravity="left"
+            android:text="III деңгейлі"
+            android:textSize="24sp" />
+        <TextView
+            android:id="@+id/testLevel3pro"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="80"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:paddingLeft="10dp"
+            android:text="75"
+            android:layout_below="@+id/testLevel3"
+            android:background="@drawable/shape_for_test_grade"/>
+  </LinearLayout>
+
+
+
+
+</LinearLayout>

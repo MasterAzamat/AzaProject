@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.asus.azaproject.RegistrationActivity"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary">
+        <ImageButton
+            android:id="@+id/backToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_back"
+            android:background="@color/colorPrimary"/>
+
+
+
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/reg1">
+
+        <ImageView
+            android:id="@+id/iceCream"
+            android:layout_width="158dp"
+            android:layout_height="113dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:foregroundGravity="center"
+            android:src="@drawable/icecream"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.212" />
+
+        <TextView
+            android:id="@+id/regText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/iceCream"
+            android:gravity="center"
+            android:text="Регистрация"
+            android:textColor="@color/colorAccent"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/editTextForRegUser"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:textColor="@color/colorAccent"
+        android:layout_marginRight="40dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/recforedit"
+        android:hint="Пользователь"
+        />
+    <EditText
+        android:id="@+id/editTextForRegPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/recforedit"
+        android:textColor="@color/colorAccent"
+        android:hint="Пороль"
+         />
+    <EditText
+        android:id="@+id/editTextForRegConfirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:textColor="@color/colorAccent"
+        android:hint="Подтверлите пороль"
+        android:background="@drawable/recforedit"
+        />
+
+    <Button
+        android:id="@+id/buttonForRegConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Сохранить"
+        android:background="@color/colorAccent"
+        android:textColor="@color/colorWhite"/>
+
+
+
+
+
+
+</LinearLayout>
