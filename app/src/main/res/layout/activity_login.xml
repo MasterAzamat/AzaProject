@@ -96,7 +96,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"
-        android:text="Сохранить"
+        android:text="Вход"
         android:background="@color/colorAccent"
         android:textColor="@color/colorWhite"/>
     <LinearLayout
