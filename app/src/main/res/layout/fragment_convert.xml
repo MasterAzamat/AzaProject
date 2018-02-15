@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="17"
+    tools:layout_editor_absoluteX="78dp"
+    tools:layout_editor_absoluteY="16dp"
+    tools:ignore="MissingConstraints">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:weightSum="17"
-        tools:layout_editor_absoluteX="78dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/EditInput"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_weight="7"
             android:layout_margin="5dp"
-            android:background="@drawable/btn2"/>
+            android:background="@drawable/btn2"
+            android:gravity="left|top"
+            android:padding="10dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -33,39 +32,47 @@
             android:weightSum="8">
 
             <Button
+                android:id="@+id/firstLang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:background="@drawable/btn2"
                 android:padding="15dp"
                 android:layout_weight="3"
-                android:text="Казахский"
-                android:textColor="@color/colorTextbutton" />
+                android:text="Латинский"
+                android:textColor="@color/colorTextbutton"
+                android:enabled="false"/>
 
             <Button
+                android:id="@+id/changeLang"
                 android:layout_width="50dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/btn"
-                android:layout_weight="1"/>
+                android:layout_weight="1" />
 
             <Button
+                android:id="@+id/lastLang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/btn2"
                 android:padding="15dp"
                 android:layout_weight="3"
-                android:text="Латинский"
-                android:textColor="@color/colorTextbutton" />
+                android:text="Казахский"
+                android:textColor="@color/colorTextbutton"
+                android:enabled="false"/>
         </LinearLayout>
 
         <TextView
+            android:id="@+id/TextOutput"
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_margin="5dp"
             android:layout_weight="8"
-            android:background="@color/colorOyster" />
+            android:background="@color/colorOyster"
+            android:padding="10dp"
+            android:textSize="14dp"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -77,14 +84,11 @@
                 android:text="Айналдыру"
                 android:background="@drawable/btnconvet"
                 android:textColor="#fff"
-
+                android:id="@+id/btTraslate"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="50pt"/>
         </LinearLayout>
 
 
 
-    </LinearLayout>
-
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

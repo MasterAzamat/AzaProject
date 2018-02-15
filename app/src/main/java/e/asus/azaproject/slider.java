@@ -1,7 +1,11 @@
 package e.asus.azaproject;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +21,9 @@ public class slider extends Activity implements View.OnClickListener  {
    public RadioButton rbtn_1,rbtn_2,rbtn_3;
     int count = 0;
     ImageView imageView,imageView2;
+    SharedPreferences sPref ;
+
+
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.slider);
@@ -28,6 +35,9 @@ public class slider extends Activity implements View.OnClickListener  {
         rbtn_1 = (RadioButton) findViewById(R.id.rbtn_1);
         rbtn_2 = (RadioButton) findViewById(R.id.rbtn_2);
         rbtn_3 = (RadioButton) findViewById(R.id.rbtn_3);
+
+
+
 
     }
 
@@ -54,6 +64,10 @@ public class slider extends Activity implements View.OnClickListener  {
             imageView.setImageResource(R.drawable.slider3);
         }
         else if(count==3){
+            sPref = getPreferences(MODE_PRIVATE);
+            SharedPreferences.Editor ed = sPref.edit();
+            ed.putBoolean("BOOL", true);
+            ed.commit();
             Intent intent = new Intent(slider.this,LoginActivity.class);
             startActivity(intent);
             finish();
