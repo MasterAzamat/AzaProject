@@ -1,6 +1,9 @@
 package e.asus.azaproject;
 
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,13 +14,23 @@ import android.widget.TextView;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
     EditText editLogin,editPassword;
-
     Button regBtn,loginBtn;
-
     TextView forgotPassword;
+
+    DBHelper dbHelper;
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Database connecting
+        dbHelper = new DBHelper(this);
+        db = dbHelper.getWritableDatabase();
+        Cursor cursor = db.query(DBHelper.DB_1TABLE,null,"_id = ? AND NAME = ?",new String[]{"2","on"},null,null,null,null);
+        if(cursor.moveToFirst()){
+            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
         setContentView(R.layout.activity_login);
 
         editLogin = (EditText)findViewById(R.id.editTextForLoginUser);
@@ -25,12 +38,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         loginBtn = (Button)findViewById(R.id.buttonForLogin);
         regBtn = (Button)findViewById(R.id.goToRegistration);
-
         forgotPassword = (TextView)findViewById(R.id.forgotPassword);
-        forgotPassword.setOnClickListener(this);
 
+
+        forgotPassword.setOnClickListener(this);
         loginBtn.setOnClickListener(this);
         regBtn.setOnClickListener(this);
+
 
     }
 
@@ -39,8 +53,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent;
         switch (view.getId()){
             case R.id.buttonForLogin:
+                ContentValues contentValues = new ContentValues();
+                contentValues.put("NAME","on");
+                db.update(DBHelper.DB_1TABLE,contentValues,"_id=?",new String[]{"2"});
                 intent = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             case R.id.goToRegistration:
                 intent = new Intent(getApplicationContext(),RegistrationActivity.class);

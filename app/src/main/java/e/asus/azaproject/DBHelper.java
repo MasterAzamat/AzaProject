@@ -5,19 +5,19 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.sql.SQLClientInfoException;
+
 /**
- * Created by Azaat on 14.02.2018.
+ * Created by Azaat on 16.02.2018.
  */
 
 public class DBHelper extends SQLiteOpenHelper {
+    public static  int  DB_VERSION = 1;
+    public static  String DB_NAME = "justwork";
+    public static  String  DB_1TABLE = "FIRST";
+    public static  String KEY_ID= "_id";
 
-    public static int DB_VERSION = 1;
-    public static final String DB_NAME = "MyDatabase";
-    public static final String FIRST_ENTER_TABLE = "firsttable";
-
-    public static final String KEY_ID = "_id";
-    public static final String FIRST_ENTER = "first_enter";
-
+    public static String USERS_TABLE = "users_table";
 
 
     public DBHelper(Context context) {
@@ -26,11 +26,19 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String a = "CREATE TABLE " + FIRST_ENTER_TABLE + " ("
-                +KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                +FIRST_ENTER+" INTEGER );";
-        sqLiteDatabase.execSQL(a);
+        sqLiteDatabase.execSQL("CREATE TABLE "+DB_1TABLE+" ("+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "NAME TEXT);");
 
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("NAME","off");
+        sqLiteDatabase.insert(DB_1TABLE,null,contentValues);
+        contentValues = new ContentValues();
+        contentValues.put("NAME","off");
+        sqLiteDatabase.insert(DB_1TABLE,null,contentValues);
+
+        sqLiteDatabase.execSQL("CREATE TABLE "+USERS_TABLE+" ("+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + "NAME TEXT,"+
+                "PASSWORD TEXT);");
     }
 
     @Override

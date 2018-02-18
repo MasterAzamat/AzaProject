@@ -32,6 +32,10 @@
             android:id="@+id/profile"
             android:icon="@drawable/ic_menu_send"
             android:title="Менің профилім" />
+        <item
+            android:id="@+id/goOut"
+            android:icon="@drawable/ic_menu_send"
+            android:title="Шығу" />
     </group>
 
 

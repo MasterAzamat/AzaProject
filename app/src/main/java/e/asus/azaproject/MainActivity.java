@@ -2,6 +2,7 @@ package e.asus.azaproject;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -121,6 +122,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.profile) {
             ftrans.replace(R.id.container,profile);
 
+        }else if (id == R.id.goOut) {
+            Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(intent);
         }
         ftrans.commit();
 
