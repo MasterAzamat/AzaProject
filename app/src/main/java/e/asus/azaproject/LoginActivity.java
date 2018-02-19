@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -53,12 +54,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent;
         switch (view.getId()){
             case R.id.buttonForLogin:
-                ContentValues contentValues = new ContentValues();
-                contentValues.put("NAME","on");
-                db.update(DBHelper.DB_1TABLE,contentValues,"_id=?",new String[]{"2"});
-                intent = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent);
-                finish();
+                Cursor cursor = db.query(DBHelper.USERS_TABLE,null," NAME = ? AND PASSWORD = ?",
+                        new String[]{editLogin.getText().toString(),editPassword.getText().toString()},null,null,null);
+                if(cursor.moveToFirst()){
+                    ContentValues contentValues = new ContentValues();
+                    contentValues.put("NAME","on");
+                    db.update(DBHelper.DB_1TABLE,contentValues,"_id=?",new String[]{"2"});
+                    intent = new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else Toast.makeText(this, "Нет пользователь с такими данными", Toast.LENGTH_SHORT).show();
+
                 break;
             case R.id.goToRegistration:
                 intent = new Intent(getApplicationContext(),RegistrationActivity.class);

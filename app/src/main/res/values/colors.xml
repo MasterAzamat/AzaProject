@@ -9,4 +9,6 @@
     <color name="colorConcrete">#f2f2f2</color>
     <color name="colorTextbutton">#a6a4a4</color>
     <color name="colorTextButton">#FFf</color>
+    <color name="colorTextDots">#bebebe</color>
+    <color name="colorTextDotsChoose">#838383</color>
 </resources>

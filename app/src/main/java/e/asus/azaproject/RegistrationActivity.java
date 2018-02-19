@@ -26,7 +26,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
 
         editLogin = (EditText)findViewById(R.id.editTextForRegUser);
         editPassword = (EditText)findViewById(R.id.editTextForRegPassword);
-        editConfirmPassword = (EditText)findViewById(R.id.editTextForRegPassword);
+        editConfirmPassword = (EditText)findViewById(R.id.editTextForRegConfirmPassword);
 
         regBtn = (Button)findViewById(R.id.buttonForRegConfirm);
         regBtn.setOnClickListener(this);
@@ -40,6 +40,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
         Intent intent;
         switch (view.getId()){
             case R.id.buttonForRegConfirm:
+                if(!editConfirmPassword.getText().toString().equals("") && !editPassword.getText().toString().equals("") && !editLogin.getText().toString().equals(""))
                 if(editConfirmPassword.getText().toString().equals(editPassword.getText().toString())){
                     Cursor cursor = db.query(DBHelper.USERS_TABLE,null,"NAME = ?",new String[]{editLogin.getText().toString()},null,null,null);
                     if(!cursor.moveToFirst()){
@@ -55,6 +56,7 @@ public class RegistrationActivity extends AppCompatActivity implements View.OnCl
                 }else {
                     Toast.makeText(this, "Пороли не совпадают!", Toast.LENGTH_SHORT).show();
                 }
+                else Toast.makeText(this, "Заполните недостающееся поле", Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.backToLogin:

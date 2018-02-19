@@ -21,9 +21,10 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme" />
-        <activity android:name=".TestLevelOne"></activity>
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".kazyna"></activity>
+        <activity android:name=".TestLevelOne" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".kazyna" />
+        <activity android:name=".Test_fragment_go"></activity>
     </application>
 
 </manifest>

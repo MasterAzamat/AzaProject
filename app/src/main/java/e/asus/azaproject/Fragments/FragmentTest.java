@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import e.asus.azaproject.R;
 import e.asus.azaproject.TestLevelOne;
+import e.asus.azaproject.Test_fragment_go;
 
 public class FragmentTest extends Fragment implements  View.OnClickListener{
 
@@ -47,7 +48,7 @@ public class FragmentTest extends Fragment implements  View.OnClickListener{
         Intent intent;
         switch (view.getId()){
             case R.id.testLevel1:
-                intent = new Intent(getActivity(),TestLevelOne.class);
+                intent = new Intent(getActivity(),Test_fragment_go.class);
                 startActivity(intent);
                 break;
             case R.id.testLevel2:

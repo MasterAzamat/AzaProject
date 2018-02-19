@@ -25,7 +25,8 @@
             android:textColor="@color/colorAccent"
             android:text="I деңгейлі"
             android:paddingLeft="10dp"
-            android:background="@drawable/shape_for_level"/>
+            android:background="@drawable/shape_for_level"
+            />
         <TextView
             android:id="@+id/testLevel1pro"
             android:layout_width="match_parent"
